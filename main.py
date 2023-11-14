@@ -39,6 +39,62 @@ def transfer():
         print("Invalid option. Please try again.")
         transfer()
 
+def momo_pay():
+    print("MoMoPay\n 1) Pay Merchant \n 2) Pay Utility \n 3) Pay School Fees \n 0) Back")
+    option3 = input()
+    if option3 == "1":
+        pay_merchant()
+    elif option3 == "2":
+        pay_utility()
+    elif option3 == "3":
+        pay_school_fees()
+    elif option3 == "0":
+        first_page()
+    else:
+        print("Invalid option. Please try again.")
+        momo_pay()
+
+def pay_merchant():
+    print("Enter merchant's name:")
+    merchant_name = input()
+    print("Enter amount to pay:")
+    amount = input()
+    print(f"You've sent {amount} to {merchant_name}")
+
+
+def pay_utility():
+    print("Enter utility account number:")
+    account_number = input()
+    print("Enter amount to pay:")
+    amount = input()
+    print(f"You've sent {amount} to {account_number}")
+
+
+def pay_school_fees():
+    print("Enter student's name:")
+    student_name = input()
+    print("Enter school's name:")
+    school_name = input()
+    print("Enter amount to pay:")
+    amount = input()
+    print(f"You've sent {amount} to {school_name} for {student_name}")
+
+
+
+def momo_and_pay_bill():
+    print("MomoPay and Pay Bill\n 1) MoMoPay \n 2) Pay Bill \n 0) Back")
+    option4 = input()
+    if option4 == "1":
+        momo_pay()
+    elif option4 == "2":
+        pay_bill()
+    elif option4 == "0":
+        first_page()
+    else:
+        print("Invalid option. Please try again.")
+        momo_and_pay_bill()
+
+
 starter_code = input("Welcome, type *170# to continue ")
 
 def first_page():
@@ -46,7 +102,10 @@ def first_page():
     option1 = input()
     if option1 == "1":
         transfer()
+    elif option1 == "2":
+        momo_and_pay_bill()
 
 
 if starter_code == "*170#":
     first_page()
+
